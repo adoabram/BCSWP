@@ -26,12 +26,16 @@
 		<div class="line_header">	
 			<ul class="wrapper-header">
 				<li class="location_header">
-					<i class="fas fa-map-marker-alt"></i>
-					<span class="adress-location_header">м.Київ, вул.Будівельників, 128</span>
+					<?php if (ale_get_option('header_address')){
+						echo '<i class="fas fa-map-marker-alt"></i> ';
+                        echo '<span class="adress-location_header">'.esc_attr(ale_get_option('header_address')).'</span>';
+                    } ?>
 				</li>
-				<li class="line_header-email">
-					<i class="far fa-envelope"></i>
-					<span>office@bcs.com.ua</span>
+				<li class="line_header-email">			
+					<?php if (ale_get_option('header_email')){
+						echo '<i class="far fa-envelope"></i> ';
+                        echo '<span>'.esc_attr(ale_get_option('header_email')).'</span>';
+                    } ?>
 				</li>
 				<li class="line_header-basket">
 					<a href="cart.html" target="_blank"><i class="fas fa-shopping-basket"></i>
