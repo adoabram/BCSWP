@@ -142,7 +142,7 @@ header{
 	padding:0;
 	width:233px;
 	height:600px;
-	background-image:url(../images/cirkle1.png);
+	background-image:url(images/cirkle1.png);
 	background-position:top center;
 	background-repeat:no-repeat;
 	animation:pendulum 15s ease-in-out;
@@ -164,7 +164,7 @@ header{
 }
 .slider_header img{
 	margin:0;
-	margin-bottom:-4px;
+	margin-bottom:-6px;
 	padding:0;
 }
 .header_navigation{

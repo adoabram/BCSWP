@@ -16,5 +16,20 @@ jQuery(function($) {
 					}
 				}, 5);
 			}
-        });
+		});
+		
+	//Height conteiners
+	function setHeaderHeight() {
+		var height = $(".slider_header").height();
+		$('.bg_header').css({
+		height:height+"px" // приравниванием высоту header'a к высоте блока "carousel"
+		});
+		$('.cirkle_images').css({
+		maxHeight:height+"px" // приравниванием высоту header'a к высоте блока "carousel"
+		});
+	}
+	setHeaderHeight(); // устанавливаем высоту окна при первой загрузке страницы
+	$(window).resize( setHeaderHeight ); // обновляем при изменении размеров окна
+
 });
+

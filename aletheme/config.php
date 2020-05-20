@@ -199,6 +199,12 @@ function ale_get_options() {
                         "type" => "heading",
                         "icon" => "fa-copyright");    
 
+    $options[] = array( "name" => esc_html__("Головне зображення в хедері","olins"),
+                        "desc" => esc_html__("Завантажте зображення","olins"),
+                        "id" => "ale_main_image",
+                        "std" => "",
+                        "type" => "upload");
+
     $options[] = array( "name" => esc_html__("Адреса в хедері","olins"),
                         "desc" => esc_html__("Введіть адресу","olins"),
                         "id" => "ale_header_address",

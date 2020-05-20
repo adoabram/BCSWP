@@ -113,7 +113,7 @@
 		</div>
 		<div class="bg_header">
 			<div class="slider_header">
-				<img src="images/main_bg1.jpg" alt="image">
+				<img src="<?php echo esc_url(ale_get_option('main_image')); ?>" alt="background image" />
 			</div>
 			<div class="circle_img"></div>
 			<nav class="header_navigation">
