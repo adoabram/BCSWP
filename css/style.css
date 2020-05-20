@@ -71,7 +71,7 @@ header{
 }
 .line-info_header{
 	height:15px;
-	background-image:url(../images/linear.png);
+	background-image:url(images/linear.png);
 	background-repeat:repeat-x;
 	opacity:0.3;
 }

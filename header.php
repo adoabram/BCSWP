@@ -90,16 +90,24 @@
                     </a>
 				</li>
 				<li class="clock_header">
-					<i class="far fa-clock"></i>
+					<?php if (ale_get_option('header_time_one')||ale_get_option('header_time_two')){
+						echo '<i class="far fa-clock"></i>';
+					}?>
 					<div class="clock_header_wrapper">
-						<span class="time-clock_header">8.00 - 18.00 ПН-ПТ</span>
-						<span class="time-clock_header">10.00 - 14.00 СУБ</span>
+						<?php if (ale_get_option('header_time_one')){
+							echo '<span class="time-clock_header">'.esc_attr(ale_get_option('header_time_one')).'</span>';
+						}?>
+						<?php if (ale_get_option('header_time_two')){
+							echo '<span class="time-clock_header">'.esc_attr(ale_get_option('header_time_two')).'</span>';
+						}?>
 					</div>
 				</li>
 				<li class="separator_header"></li>
 				<li class="tel_header">
-					<i class="fas fa-phone-alt"></i>
-					<span class="phone_header">0978115555</span>
+					<?php if (ale_get_option('header_call')){
+						echo '<i class="fas fa-phone-alt"></i>';
+						echo '<span class="phone_header">'.esc_attr(ale_get_option('header_call')).'</span>';
+					}?>
 				</li>
 			</ul>
 		</div>
