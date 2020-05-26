@@ -235,6 +235,60 @@ function ale_get_options() {
                         "std" => "",
                         "type" => "text");
 
+    $options[] = array( "name" => esc_html__("Заголовок баннер верх","olins"),
+                        "desc" => esc_html__("Введіть текст","olins"),
+                        "id" => "ale_header_slogan_top",
+                        "std" => "",
+                        "type" => "text");
+
+    $options[] = array( "name" => esc_html__("Заголовок баннер центр","olins"),
+                        "desc" => esc_html__("Введіть текст","olins"),
+                        "id" => "ale_header_slogan_center",
+                        "std" => "",
+                        "type" => "text");
+
+    $options[] = array( "name" => esc_html__("Заголовок баннер низ","olins"),
+                        "desc" => esc_html__("Введіть текст","olins"),
+                        "id" => "ale_header_slogan_bottom",
+                        "std" => "",
+                        "type" => "text");
+
+    $options[] = array( "name" => esc_html__("Рекламний слоган верх","olins"),
+                        "desc" => esc_html__("Введіть текст","olins"),
+                        "id" => "ale_header_advertasment_top",
+                        "std" => "",
+                        "type" => "text");
+    
+    $options[] = array( "name" => esc_html__("Рекламний слоган низ","olins"),
+                        "desc" => esc_html__("Введіть текст","olins"),
+                        "id" => "ale_header_advertasment_bottom",
+                        "std" => "",
+                        "type" => "text");
+    
+    $options[] = array( "name" => esc_html__("Інформаційна панель заголовок жирний","olins"),
+                        "desc" => esc_html__("Введіть текст","olins"),
+                        "id" => "ale_header_inform_header_bold",
+                        "std" => "",
+                        "type" => "text");
+    
+    $options[] = array( "name" => esc_html__("Інформаційна панель заголовок","olins"),
+                        "desc" => esc_html__("Введіть текст","olins"),
+                        "id" => "ale_header_inform_header_normal",
+                        "std" => "",
+                        "type" => "text");
+
+    $options[] = array( "name" => esc_html__("Інформаційна панель заголовок текст","olins"),
+                        "desc" => esc_html__("Введіть текст","olins"),
+                        "id" => "ale_header_inform_text",
+                        "std" => "",
+                        "type" => "text");
+
+    $options[] = array( "name" => esc_html__("Кількість замовлень","olins"),
+                        "desc" => esc_html__("Введіть число","olins"),
+                        "id" => "ale_header_inform_number",
+                        "std" => "",
+                        "type" => "text");
+
     $options[] = array("name" => esc_html__("Page Heading","olins"),
                         "type" => "heading",
                         "icon" => "fa-header");
@@ -575,69 +629,6 @@ function ale_metaboxes($meta_boxes) {
                     array( 'name' => esc_html__('Enable','olins'), 'value' => 'enable', ),
                     array( 'name' => esc_html__('Disable','olins'), 'value' => 'disable', ),
                 ),
-            ),
-            array(
-                'name' => esc_html__('Слоган заголовок верх','olins'),
-                'desc' => esc_html__('Введіть текст','olins'),
-                'id'   => $prefix . 'slogan_one_header',
-                'std'  => 'Тільки кращі',
-                'type' => 'text',
-            ),
-            array(
-                'name' => esc_html__('Слоган заголовок','olins'),
-                'desc' => esc_html__('Введіть текст','olins'),
-                'id'   => $prefix . 'slogan_main_header',
-                'std'  => 'БЕТОННІ ВИРОБИ',
-                'type' => 'text',
-            ),
-            array(
-                'name' => esc_html__('Слоган заголовок низ','olins'),
-                'desc' => esc_html__('Введіть текст','olins'),
-                'id'   => $prefix . 'slogan_bottom_header',
-                'std'  => 'В Києві та області',
-                'type' => 'text',
-            ),
-            array(
-                'name' => esc_html__('Вказівник верх','olins'),
-                'desc' => esc_html__('Введіть текст','olins'),
-                'id'   => $prefix . 'movetop_header',
-                'std'  => 'ШУКАЄТЕ БУДІВЕЛЬНІ МЕТЕРІАЛИ ВИСОКОЇ ЯКОСТІ ТА ПО ДОСТУПНИМ ЦІНАМ?',
-                'type' => 'text',
-            ),
-            array(
-                'name' => esc_html__('Вказівник низ','olins'),
-                'desc' => esc_html__('Введіть текст','olins'),
-                'id'   => $prefix . 'move_bottom_header',
-                'std'  => 'ТОДІ ВАМ САМЕ ДО НАС',
-                'type' => 'text',
-            ),
-            array(
-                'name' => esc_html__('Лічильник замовлень','olins'),
-                'desc' => esc_html__('Введіть кількісь замовлень','olins'),
-                'id'   => $prefix . 'counter_order',
-                'std'  => '1245',
-                'type' => 'text',
-            ),
-            array(
-                'name' => esc_html__('Інформаційна панель заголовок','olins'),
-                'desc' => esc_html__('Введіть текст','olins'),
-                'id'   => $prefix . 'inform_header_one',
-                'std'  => 'Виконаних',
-                'type' => 'text',
-            ),
-            array(
-                'name' => esc_html__('Інформаційна панель заголовок жирний','olins'),
-                'desc' => esc_html__('Введіть текст','olins'),
-                'id'   => $prefix . 'inform_header_two',
-                'std'  => 'Замовлень',
-                'type' => 'text',
-            ),
-            array(
-                'name' => esc_html__('Інформаційна панель текст','olins'),
-                'desc' => esc_html__('Введіть текст','olins'),
-                'id'   => $prefix . 'inform_text',
-                'std'  => 'Саме стільки клієнтів скористалися послугами нашої компанії за попередній рік. Від приватних осіб до великих будівельних корпорацій.',
-                'type' => 'textarea',
             ),
             array(
                 'name' => esc_html__('Заголовок секції ПЕРЕВАГИ','olins'),

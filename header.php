@@ -130,14 +130,22 @@
 			<div class="slogan_header">
 				<div class="border_left-slogan_header"></div>
 				<div class="description-slogan_header">
-					<span class="top_slogan">Тільки кращі</span>
-					<h1>Бетонні вироби</h1>
-					<span class="bottom_slogan">В Києві та області </span>
+					<?php if (ale_get_option('header_slogan_top')){
+						echo '<span class="top_slogan">'.esc_attr(ale_get_option('header_slogan_top')).'</span>';
+					}?>
+					<?php if (ale_get_option('header_slogan_center')){
+						echo '<h1>'.esc_attr(ale_get_option('header_slogan_center')).'</h1>';
+					}?>
+					<?php if (ale_get_option('header_slogan_bottom')){
+						echo '<span class="bottom_slogan">'.esc_attr(ale_get_option('header_slogan_bottom')).'</span>';
+					}?>
 				</div>
 				<div class="border_right-slogan_header"></div>
 			</div>
 		</div>
-		<div class="advertasment-header">Шукаєте будівельні метеріали високої якості та по доступним цінам?</div>
+		<?php if (ale_get_option('header_advertasment_top')){
+			echo '<div class="advertasment-header">'.esc_attr(ale_get_option('header_advertasment_top')).'</div>';
+		}?>
 		<div class="advertasment_line-header">
 			<div class="map_advertasment-header">
 				<div class="map_point map_point1">
@@ -187,18 +195,20 @@
 						<circle r="2" cx="25" cy="18" fill="none" stroke="orange"/>
 					</svg>
 				</div>
-				<div class="description_advertasment-header">
-					<span class="description_advertasment_counter" data-max="1245">550</span>
-				</div>
+				<?php if (ale_get_option('header_inform_number')){
+					echo '<div class="description_advertasment-header">
+						<span class="description_advertasment_counter" data-max="'.esc_attr(ale_get_option('header_inform_number')).'">0</span>
+					</div>';
+				}?>
 			</div>
 			<div class="description_line-header">
 				<p>Виконаних<span>Замовлень</span></p>
 				<p>Саме стільки клієнтів скористалися послугами нашої компанії за попередній рік. Від приватних осіб до великих будівельних 
 				корпорацій.</p>
 			</div>
-			<div class="pointer_line-header">
-				<a href="#catalog"><span>Тоді Вам саме до нас</span></a>
-			</div>
+			<?php if (ale_get_option('header_advertasment_bottom')){
+				echo '<div class="pointer_line-header"><a href="#catalog"><span>'.esc_attr(ale_get_option('header_advertasment_bottom')).'</span></a></div>';
+			}?>
 		</div>
 	</header>
    
