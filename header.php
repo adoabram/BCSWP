@@ -202,9 +202,10 @@
 				}?>
 			</div>
 			<div class="description_line-header">
-				<p>Виконаних<span>Замовлень</span></p>
-				<p>Саме стільки клієнтів скористалися послугами нашої компанії за попередній рік. Від приватних осіб до великих будівельних 
-				корпорацій.</p>
+				<?php if (ale_get_option('header_inform_header_bold')||ale_get_option('header_inform_header_normal')){
+				echo '<p>'.esc_attr(ale_get_option('header_inform_header_normal')).'<span>'.esc_attr(ale_get_option('header_inform_header_bold')).'</span></p>
+				<p>'.esc_attr(ale_get_option('header_inform_text')).'</p>';
+			}?>
 			</div>
 			<?php if (ale_get_option('header_advertasment_bottom')){
 				echo '<div class="pointer_line-header"><a href="#catalog"><span>'.esc_attr(ale_get_option('header_advertasment_bottom')).'</span></a></div>';

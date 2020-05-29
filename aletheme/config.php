@@ -281,7 +281,7 @@ function ale_get_options() {
                         "desc" => esc_html__("Введіть текст","olins"),
                         "id" => "ale_header_inform_text",
                         "std" => "",
-                        "type" => "text");
+                        "type" => "textarea");
 
     $options[] = array( "name" => esc_html__("Кількість замовлень","olins"),
                         "desc" => esc_html__("Введіть число","olins"),
