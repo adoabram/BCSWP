@@ -1295,12 +1295,12 @@ footer{
 }
 a.facebook_link{
 	left:0;
-	background-image:url(../images/facebook.svg);
+	background-image:url(images/facebook.svg);
 	background-color:white;
 }
 a.youtube_link{
 	left:50px;
-	background-image:url(../images/youtube.svg);
+	background-image:url(images/youtube.svg);
 	background-color:white;
 }
 .second_footer{
