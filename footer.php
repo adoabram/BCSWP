@@ -18,20 +18,33 @@
 			</div>
 			<div class="main_footer-menu">
 				<h3>Меню</h3>
-				<ul>
-					<li><a href="#">Головна</a></li>
-					<li><a href="posts-pages.html">Проекти</a></li>
-					<li><a href="#">Магазин</a></li>
-					<li><a href="shop.html">Контакти</a></li>
+				<ul> 
+					<?php
+						wp_nav_menu(array(
+							'theme_location'=>'header_menu',
+							'menu'=>'Header Menu',
+							'menu_class'=>'',
+							'walker'=>new Aletheme_Nav_Walker(),
+							'container'=>'',
+                   		));
+                	?>
 				</ul>
 			</div>
 			<div class="main_footer-contact">
 				<h3>Контакти</h3>
 				<ul class="main_footer-contact_contacts">
-					<li><i class="far fa-envelope-open"></i>office@bcs.com.ua</li>
-					<li><i class="fas fa-phone-alt"></i>096 353 56 67</li>
-					<li><i class="fas fa-phone-alt"></i>096 353 56 67</li>
-					<li><i class="fas fa-map-marked-alt"></i>м.Київ, вул.Будівельників, 128</li>
+					<?php if (ale_get_option('footer_email')){
+						echo '<li><i class="far fa-envelope-open"></i>'.esc_attr(ale_get_option('footer_email')).'</li>';
+                    }?>
+					<?php if (ale_get_option('footer_call')){
+						echo '<li><i class="fas fa-phone-alt"></i>'.esc_attr(ale_get_option('footer_call')).'</li>';
+                    }?>
+					<?php if (ale_get_option('footer_call_next')){
+						echo '<li><i class="fas fa-phone-alt"></i>'.esc_attr(ale_get_option('footer_call_next')).'</li>';
+                    }?>
+					<?php if (ale_get_option('footer_address')){
+						echo '<li><i class="fas fa-map-marked-alt"></i>'.esc_attr(ale_get_option('footer_address')).'</li>';
+                    }?>
 				</ul>
 				<div class="main_footer-social">
 					<?php if (ale_get_option('fb')){
@@ -44,7 +57,9 @@
 			</div>
 		</section>		
 		<div class="second_footer">
-			<p class="second_footer-copi">© Всі права захищені | ТОВ Будівельна компанія BCS</p>
+			<?php if (ale_get_option('copyrights')){
+				echo '<p class="second_footer-copi">'.esc_attr(ale_get_option('copyrights')).'</p>';
+			}?>
 		</div>		
 	</footer>
 	

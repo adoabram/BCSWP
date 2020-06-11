@@ -1200,6 +1200,7 @@ footer{
 .main_footer h3{
 	position:relative;
 	margin-bottom:55px;
+	font-family:'Play', sans-serif;
 	font-size:18px;
 	color:white;
 	text-transform:uppercase;
